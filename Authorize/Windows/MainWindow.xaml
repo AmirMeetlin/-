@@ -1,0 +1,162 @@
+﻿<Window x:Class="Authorize.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Authorize"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="450" MinHeight="450" MinWidth="450" MaxHeight="450" MaxWidth="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Авторизация"
+                   HorizontalAlignment="Center"
+                   FontSize="20"      
+                   VerticalAlignment="Top"
+                   Foreground="Black" Margin="162,20,161.2,0" Grid.RowSpan="2"
+        />
+        <WrapPanel 
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center" 
+            
+            Grid.Row="1">
+            <TextBlock
+            Text="Логин"
+            FontWeight="Bold"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            FontSize="14"
+            Grid.Row="2"
+        ></TextBlock>
+            <TextBox
+            x:Name="tbLog"
+            Foreground="Gray"
+            Text="Логин"
+            FontWeight="Bold"      
+            VerticalAlignment="Center"
+            FontSize="13"
+            
+            Margin="10,0,0,0" 
+            Width="100" GotFocus="tb_GotFocus" 
+            LostFocus="tb_LostFocus"
+        ></TextBox>
+        </WrapPanel>
+        <WrapPanel 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"  Grid.Row="2">
+            <TextBlock
+            Text="Пароль"
+            FontWeight="Bold"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Center"
+            FontSize="14"
+            Grid.Row="2"
+        />
+            <PasswordBox
+                x:Name="tbPas"
+            Foreground="Gray"
+            FontWeight="Bold"      
+            VerticalAlignment="Center"
+            FontSize="13"
+            Grid.Row="2"
+            Grid.Column="1" Margin="10,0,0,0" 
+            Width="100"
+             
+                >
+
+            </PasswordBox>
+        </WrapPanel>
+        <CheckBox
+            x:Name="cbRemember"
+            Content="Запомни меня" 
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" 
+            Grid.Row="3"
+            >
+
+        </CheckBox>
+        <Button
+            Content="Отправить" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center"
+            Width="100"
+            Height="24"
+            x:Name="btnSend" 
+            Grid.Row="4" Click="btnSend_Click"
+            >
+
+        </Button>
+
+        <TextBlock
+            x:Name="Caph"
+           Text="HFFRG"
+            Grid.Row="5"
+            Foreground="Black"         
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            FontSize="20"
+            Visibility="Hidden"
+        />
+        <Border
+            Grid.Row="5" Grid.Column="1" 
+            HorizontalAlignment="Center"
+            Width="100"
+            Height="35"
+            Visibility="Hidden"
+            x:Name="bordCaph"
+        >
+            <Border.Background>
+                <SolidColorBrush Color="Red" Opacity="0.69"/>
+            </Border.Background>
+        </Border>
+        <Button
+            x:Name="btnRes"
+            Grid.Row="5"
+            Grid.Column="1"
+            Content="Обновить"
+            Foreground="Black"
+            Background="White"
+            BorderBrush="White"
+            Width="70" 
+            Height="40"
+            Margin="186,0,0,0" Click="btnRes_Click"
+            Visibility="Hidden"
+            
+                     
+        />
+        <TextBlock
+            Text="Символы на рисунке"
+            FontWeight="Bold"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            FontSize="14"
+            Grid.Row="6" Margin="0,0,140,0"
+            Visibility="Hidden"
+            x:Name="tbCaph"
+        ></TextBlock>
+        <TextBox
+            x:Name="tbSims"
+            GotFocus="tb_GotFocus"
+            Foreground="Gray"
+            Text="Символы на рисунке"
+            FontWeight="Bold"      
+            VerticalAlignment="Top"
+            FontSize="13"
+            Grid.Row="10"
+            Grid.Column="1" 
+            Width="150" 
+            HorizontalAlignment="Center" 
+            Margin="190,0,0,0" 
+            LostFocus="tb_LostFocus"
+            Visibility="Hidden"
+        ></TextBox>
+        
+    </Grid>
+</Window>
